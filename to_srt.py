@@ -402,7 +402,7 @@ class TT:
         style = {}
         for k, v in element.items():
             if k == '{tts}color':
-                if re.match(r'#\d{6}\d{2}?', v):
+                if re.match(r'#[0-9a-fA-F]{6}', v):
                     style['color'] = v[0:7]
                 else:
                     rgb_color = re.match(r'rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)', v.strip())
